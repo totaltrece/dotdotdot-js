@@ -651,15 +651,3 @@ export default class Dotdotdot {
         },
     };
 }
-
-//	The jQuery plugin.
-(function ($) {
-    if (typeof $ != 'undefined') {
-        $.fn.dotdotdot = function (options) {
-            return this.each((e, element) => {
-                let dot = new Dotdotdot(element, options);
-                element['dotdotdot'] = dot.API;
-            });
-        };
-    }
-})(window['Zepto'] || window['jQuery']);
